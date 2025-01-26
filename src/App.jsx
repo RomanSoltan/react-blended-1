@@ -5,13 +5,24 @@ import ForbesList from './components/ForbesList/ForbesList';
 import Heading from './components/Heading/Heading';
 import Section from './components/Section/Section';
 import Statistics from './components/Statistics/Statistics';
+import article from './data/article.json';
 
 export const App = () => {
+  const { poster, tag, title, description, name, avatar, postedAt } = article;
+
   return (
     <Section>
       <Container>
         <Heading title="Task 1 Blog Card" bottom />
-        <BlogCard />
+        <BlogCard
+          poster={poster}
+          tag={tag}
+          title={title}
+          description={description}
+          name={name}
+          avatar={avatar}
+          postedAt={postedAt}
+        />
 
         <Heading title="Task 2 Statistics" top bottom />
         <Statistics title="Main Statistics" />
